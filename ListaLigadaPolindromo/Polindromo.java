@@ -17,6 +17,7 @@ public class Polindromo {
 
     No cabeca;
 
+    // Metodo que adiciona os valor na lista
     public void addValue(int valor) {
         No novoNo = new No(valor);
 
@@ -34,6 +35,7 @@ public class Polindromo {
         novoNo.anterior = atual;
     }
 
+    // Além de listar, armazena o respectivo elemento na listaNormal
     public void listagem() {
         No atual = cabeca;
 
@@ -45,6 +47,7 @@ public class Polindromo {
         System.out.println("null");
     }
 
+    // Além de listar, armazena o respectivo elemento na listaInversa
     public void listagemInversa() {
         if(cabeca == null) {
             System.out.println("Lista está vazia!");
@@ -66,6 +69,10 @@ public class Polindromo {
         }
         System.out.println("null");
     }
+
+    /*Com um loop, será percorida toda listNormal, todas às vezes que encontrar um valor igual a listaInversa
+    * adiciona +1 no qntIguais, se no final, qntIguais for igual ao size da listaNormal, significa que todos
+    * os elementos são igual/ são polindromos*/
 
     public void ehPolindromo() {
         int qntIguais = 0;
